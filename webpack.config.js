@@ -18,12 +18,15 @@ var moduleConfig = {
 
 var resolveConfig = {
   extensions: [".js", ".jsx", ".json"],
-  modules: [path.resolve(__dirname, "src"), "node_modules"]
+  modules: ["node_modules"],
+  alias: {
+    components: path.resolve(__dirname, 'src/components')
+  }
 };
 
 module.exports = {
   entry: {
-    index: "./src/index.jsx",
+    index: path.resolve(__dirname,"src", "index.jsx")
   },
   output: {
     path:  path.resolve(__dirname, "build"),
