@@ -1,5 +1,1 @@
-import VolcanoPlot from "./components/VolcanoPlot";
-
-export {VolcanoPlot};
-
-export default {VolcanoPlot};
+export {default as VolcanoPlot} from "./components/VolcanoPlot";

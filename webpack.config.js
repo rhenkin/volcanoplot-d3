@@ -26,11 +26,9 @@ module.exports = {
     index: "./src/index.jsx",
   },
   output: {
-    path:  path.join(__dirname, "build"),
-    publicPath: "/",
+    path:  path.resolve(__dirname, "build"),
     filename: "[name].js",
-    library: "VolcanoPlot",
-    libraryTarget: "umd"
+    library: "VolcanoPlot"
   },
   module: moduleConfig,
   resolve: resolveConfig,
