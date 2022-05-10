@@ -29,7 +29,8 @@ module.exports = {
   },
   output: {
     path: buildDir,
-    filename: "[name].js"
+    filename: "[name].js",
+    libraryTarget: "umd"
   },
   module: moduleConfig,
   resolve: resolveConfig,
