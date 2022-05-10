@@ -1,1 +1,1 @@
-export {default as VolcanoPlot} from "./components/VolcanoPlot";
+export {default as VolcanoPlot} from "components/VolcanoPlot";

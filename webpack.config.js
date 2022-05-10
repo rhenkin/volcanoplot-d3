@@ -1,5 +1,7 @@
 const path = require("path");
 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 var moduleConfig = {
     rules: [    
       {
@@ -18,26 +20,26 @@ var moduleConfig = {
 
 var resolveConfig = {
   extensions: [".js", ".jsx", ".json"],
-  modules: ["node_modules"],
-  alias: {
-    components: path.resolve(__dirname, 'src/components')
-  }
+  modules: [path.resolve(__dirname,"src"), "node_modules"]
 };
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname,"src", "index.jsx")
+    index: path.resolve(__dirname,"src", "index.jsx"),
+    bundle: path.resolve(__dirname, "index.jsx")
   },
   output: {
     path:  path.resolve(__dirname, "build"),
     filename: "[name].js",
-    library: "VolcanoPlot"
+    library: {
+      name: "VolcanoPlot",
+      type: "umd"
+    }
   },
   module: moduleConfig,
   resolve: resolveConfig,
   externals: {
     react: "react",
-    reactDOM: "react-dom",
     d3: "d3"
-  }
+  }  
 };
