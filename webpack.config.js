@@ -29,8 +29,7 @@ module.exports = {
   },
   output: {
     path: buildDir,
-    filename: "[name].js",
-    library: "VP"
+    filename: "[name].js"
   },
   module: moduleConfig,
   resolve: resolveConfig,

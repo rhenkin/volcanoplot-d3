@@ -9,6 +9,10 @@
   ],
   "author": "Rafael Henkin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rhenkin/d3-volcanoplot.git"
+  },
   "scripts": {
     "start": "cd demo && webpack serve --progress",
     "build": "webpack --mode production"
