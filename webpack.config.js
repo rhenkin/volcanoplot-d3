@@ -1,13 +1,13 @@
 const path = require("path");
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+var SRC = path.resolve(__dirname, "src")
 
 var moduleConfig = {
     rules: [    
       {
         test: /\.js[x]?$/,
         resolve: { extensions: [".js", ".jsx"] },
-        exclude: /(node_modules)/,
+        include: [SRC],
         use: {
           loader: "babel-loader",
           options: {
@@ -20,16 +20,15 @@ var moduleConfig = {
 
 var resolveConfig = {
   extensions: [".js", ".jsx", ".json"],
-  modules: [path.resolve(__dirname,"src"), "node_modules"]
+  modules: [SRC, "node_modules"]
 };
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname,"src", "index.jsx"),
-    bundle: path.resolve(__dirname, "index.jsx")
+    index: path.resolve(__dirname, "src", "index.jsx")    
   },
   output: {
-    path:  path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "build"),
     filename: "[name].js",
     library: {
       name: "VolcanoPlot",
