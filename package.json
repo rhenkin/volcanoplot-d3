@@ -2,7 +2,7 @@
   "name": "d3-volcanoplot",
   "version": "1.0.0",
   "description": "An interactive volcano plot with D3",
-  "main": "build/index.js",
+  "browser": "build/index.js",
   "files": [
     "build/index.js",
     "src"

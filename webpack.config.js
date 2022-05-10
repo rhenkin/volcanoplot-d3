@@ -29,7 +29,9 @@ module.exports = {
   },
   output: {
     path: buildDir,
+    publicPath: "/",
     filename: "[name].js",
+    library: "VolcanoPlot",
     libraryTarget: "umd"
   },
   module: moduleConfig,
