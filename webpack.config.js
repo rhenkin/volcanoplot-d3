@@ -1,7 +1,5 @@
 const path = require("path");
 
-var buildDir = path.resolve(__dirname, "build");
-
 var moduleConfig = {
     rules: [    
       {
@@ -28,7 +26,7 @@ module.exports = {
     index: "./src/index.jsx",
   },
   output: {
-    path: buildDir,
+    path:  path.join(__dirname, "build"),
     publicPath: "/",
     filename: "[name].js",
     library: "VolcanoPlot",
