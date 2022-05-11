@@ -12,7 +12,8 @@
   "scripts": {
     "start": "cd demo && webpack serve --progress",
     "build-dev": "webpack --mode development --progress",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "prepare": "yarn run build"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
