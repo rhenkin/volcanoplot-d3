@@ -24,11 +24,13 @@ var resolveConfig = {
 };
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     index: path.resolve(__dirname, "src", "index.jsx")    
   },
-  output: {
+  output: {        
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
     filename: "[name].js",
     library: {
       name: "VolcanoPlot",
@@ -38,7 +40,12 @@ module.exports = {
   module: moduleConfig,
   resolve: resolveConfig,
   externals: {
-    react: "react",
+    'react': {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React'
+    },
     d3: "d3"
   }  
 };
