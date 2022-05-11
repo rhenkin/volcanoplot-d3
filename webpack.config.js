@@ -24,7 +24,6 @@ var resolveConfig = {
 };
 
 module.exports = {
-  devtool: 'source-map',
   entry: {
     index: path.resolve(__dirname, "src", "index.jsx")    
   },
