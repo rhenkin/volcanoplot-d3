@@ -33,7 +33,7 @@ module.exports = {
     filename: "[name].js",
     library: {
       name: "VolcanoPlot",
-      type: "umd"
+      type: "commonjs2"
     }
   },
   module: moduleConfig,
