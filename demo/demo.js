@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import VolcanoPlot from "../src/";
+import { VolcanoPlot } from "../src/index.jsx";
 
 const testData = [
     {"logFC": -5, "logP": 0},
